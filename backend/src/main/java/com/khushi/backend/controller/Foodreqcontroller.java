@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-
+import java.sql.Timestamp;
 
 import com.khushi.backend.exception.Notfoundbyidexception;
 
@@ -23,6 +23,8 @@ public class Foodreqcontroller {
 
     @PostMapping("/postfoodreq")
     Foodreq newFoodreq(@RequestBody Foodreq newFoodreq) {
+
+        newFoodreq.setDate_of_req(new Timestamp(System.currentTimeMillis()));
         return foodreqrepository.save(newFoodreq);
     }
 

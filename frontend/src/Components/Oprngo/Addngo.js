@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 export default function Addngo() {
 
   let navigate = useNavigate();
+
+  const location = useLocation();
+  const exportngousername = location.state ? location.state.ngousername : '';
 
   const [ngo, setNgo] = useState({
     ngousername: '',
@@ -21,8 +24,11 @@ export default function Addngo() {
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(ngo);
-    await axios.post("http://localhost:8080/postngo", ngo);
-    navigate('/Oprfoodreq/Addfoodreq');
+
+    const response = await axios.post("http://localhost:8080/postngo", ngo);
+    const ngoid = response.data;
+
+    navigate('/Oprfoodreq/Bookfoodreqs', { state: { exportngousername: ngousername } });
   }
 
   return (
@@ -30,7 +36,8 @@ export default function Addngo() {
       <div className='row'>
         <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
           <h2 className='text-centre m-4'>Register NGO</h2>
-          <form action="" onSubmit={(e) => onSubmit(e)}>
+          
+          <form action="" onSubmit={onSubmit}>
           <div className='md-3'>
               <label htmlFor="ngoname" className='form-label'>NGO Name</label>
               <input type="text" className='form-control' name="ngoname" value={ngoname} onChange={(e) => onInputChange(e)} placeholder='enter your NGO name' />

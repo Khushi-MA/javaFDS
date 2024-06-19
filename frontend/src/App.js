@@ -16,6 +16,7 @@ import Viewngo from './Components/Oprngo/Viewngo';
 import Addfoodreq from './Components/Oprfoodreq/Addfoodreq';
 import Editfoodreq from './Components/Oprfoodreq/Editfoodreq';
 import Viewfoodreq from './Components/Oprfoodreq/Viewfoodreq';
+import Bookfoodreqs from './Components/Oprfoodreq/Bookfoodreqs';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/Oprfoodreq/Addfoodreq" element={<Addfoodreq />} />
           <Route exact path="/Oprfoodreq/Editfoodreq" element={<Editfoodreq />} />
           <Route exact path="/Oprfoodreq/Viewfoodreq" element={<Viewfoodreq />} />
+          <Route exact path="/Oprfoodreq/Bookfoodreqs" element={<Bookfoodreqs />} />
 
         </Routes>
       </Router>

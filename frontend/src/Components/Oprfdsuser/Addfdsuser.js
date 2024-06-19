@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Addfdsuser() {
   let navigate = useNavigate();
+
   const location = useLocation();
   const exportfdsusername = location.state ? location.state.fdsusername : '';
 
@@ -32,6 +32,7 @@ export default function Addfdsuser() {
       <div className='row'>
         <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
           <h2 className='text-centre m-4'>Register FDS user</h2>
+          
           <form onSubmit={onSubmit}>
             <div className='md-3'>
               <label htmlFor='fdsname' className='form-label'>Name</label>
@@ -47,6 +48,7 @@ export default function Addfdsuser() {
             </div>
             <button type='submit' className='btn btn-primary'>Register</button>
           </form>
+          
         </div>
       </div>
     </div>

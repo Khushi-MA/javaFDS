@@ -1,5 +1,7 @@
 package com.khushi.backend.controller;
 
+import com.khushi.backend.exception.Notfoundusername;
+import com.khushi.backend.model.Fdsuser;
 import com.khushi.backend.model.Ngo;
 import com.khushi.backend.repository.Ngorepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.khushi.backend.exception.Notfoundbyidexception;
 
 import java.util.List;
+
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3002")
@@ -33,4 +36,11 @@ public class Ngocontroller {
                 .orElseThrow(() -> new Notfoundbyidexception(id));
     }
 
+    @GetMapping("/getngobyngousername/{ngousername}")
+    Ngo getNgoByNgousername(@PathVariable String ngousername) {
+        return ngorepository.findByNgousername(ngousername)
+                .orElseThrow(() -> new Notfoundusername(ngousername));
+    }
+
 }
+
