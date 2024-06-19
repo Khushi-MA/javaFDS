@@ -29,7 +29,7 @@ export default function Bookfoodreqs() {
 
     const loadFoodreqs = async () => {
         console.log(NgoInfo)
-        const result = await axios.get("http://localhost:8080/getallfoodreqs");
+        const result = await axios.get("http://localhost:8080/getfoodreqswithnullngoid");
         // console.log(result);
         setFoodreq(result.data);
     }

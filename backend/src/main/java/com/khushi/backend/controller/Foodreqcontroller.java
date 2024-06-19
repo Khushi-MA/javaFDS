@@ -58,4 +58,9 @@ public class Foodreqcontroller {
         return "Deleted foodreq with id: " + id;
     }
 
+    @GetMapping("/getfoodreqswithnullngoid")
+    public List<Foodreq> getFoodreqsWithNullNgoid() {
+        return foodreqrepository.findByNgoidIsNull();
+    }
+
 }
