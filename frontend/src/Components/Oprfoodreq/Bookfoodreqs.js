@@ -13,6 +13,8 @@ export default function Bookfoodreqs() {
 
     const [foodreq, setFoodreq] = useState([]);
 
+    const [selectedFoodreqs, setSelectedFoodreqs] = useState([]);
+
     useEffect(() => {
         axios.get(`http://localhost:8080/getngobyngousername/${exportngousername}`)
             .then(response => {
@@ -34,6 +36,28 @@ export default function Bookfoodreqs() {
         setFoodreq(result.data);
     }
 
+    const handleCheckboxChange = (e, foodreqid) => {
+        if (e.target.checked) {
+            setSelectedFoodreqs([...selectedFoodreqs, foodreqid]);
+        } else {
+            setSelectedFoodreqs(selectedFoodreqs.filter(id => id !== foodreqid));
+        }
+    };
+
+    const handleButtonClick = () => {
+        selectedFoodreqs.forEach(foodreqid => {
+            fetch(`http://localhost:8080/updatefoodreq/${foodreqid}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ngoid: NgoInfo.ngoid,
+                }),
+            });
+        });
+    };
+
 
 return (
         <div classNameName="container">
@@ -44,6 +68,7 @@ return (
 
                 <pre>{JSON.stringify(NgoInfo, null, 2)}</pre>
 
+                <form action="" onSubmit={handleButtonClick}>
 
                 <table className="table">
                     <thead className="thead-dark">
@@ -58,17 +83,29 @@ return (
                     <tbody>
                         {
                             foodreq.map((foodreq, index) => (
-                                <tr>
+                                <tr key={foodreq.foodreqid}>
                                     <th scope="row" key={index}>{index + 1}</th>
+                                    <td><input type="checkbox" onChange={(e) => handleCheckboxChange(e, foodreq.foodreqid)} /></td>
                                     <td>{foodreq.foodreqid}</td>
                                     <td>{foodreq.fdsuserid}</td>
                                     <td>{foodreq.ngoid}</td>
+                                    {/* other columns */}
                                 </tr>
                             ))
+                            // foodreq.map((foodreq, index) => (
+                            //     <tr>
+                            //         <th scope="row" key={index}>{index + 1}</th>
+                            //         <td>{foodreq.foodreqid}</td>
+                            //         <td>{foodreq.fdsuserid}</td>
+                            //         <td>{foodreq.ngoid}</td>
+                            //     </tr>
+                            // ))
                         }
 
                     </tbody>
                 </table>
+                <button type='submit' className='btn btn-outline-primary' onClick={handleButtonClick}>Update selected</button>
+                </form>
 
 
             </div>
