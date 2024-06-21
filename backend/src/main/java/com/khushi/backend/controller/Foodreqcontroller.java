@@ -3,15 +3,19 @@ package com.khushi.backend.controller;
 import com.khushi.backend.model.Foodreq;
 import com.khushi.backend.repository.Foodreqrepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.sql.Timestamp;
+import org.springframework.scheduling.annotation.Scheduled;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 import com.khushi.backend.exception.Notfoundbyidexception;
 
-
 import java.util.List;
+
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3002")
@@ -63,4 +67,19 @@ public class Foodreqcontroller {
         return foodreqrepository.findByNgoidIsNull();
     }
 
+
+
+    @Scheduled(cron = "0 0 0 * * ?")
+    public void deleteExpiredFoodreqs() {
+        List<Foodreq> allFoodreqs = foodreqrepository.findAll();
+        LocalDate today = LocalDate.now();
+
+        for (Foodreq foodreq : allFoodreqs) {
+            LocalDate collectionDate = foodreq.getDate_of_collection().toLocalDate();
+            if (collectionDate.plusDays(foodreq.getDays_perishable()).isBefore(today)) {
+                foodreqrepository.delete(foodreq);
+            }
+        }
+    }
 }
+

@@ -8,20 +8,24 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
+    "chart.js": "^4.1.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
     "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-"scripts": {
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "start": "npm run build && npm run dev && npm run open",
-  "open": "concurrently \"http-server -a localhost -p 1234\" \"sleepms 1000 && open http://localhost:3002/build\"",
-  "dev": "react-scripts start"
-},
+  "scripts": {
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "npm run build && npm run dev && npm run open",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"sleepms 1000 && open http://localhost:3002/build\"",
+    "dev": "react-scripts start"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

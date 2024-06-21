@@ -1,0 +1,98 @@
+/* Table.css */
+
+body {
+    /* font-family: Arial, sans-serif; */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+
+
+  
+    /* padding: 20px; */
+  }
+
+  h1 {
+    font-weight: 300;
+  }
+  
+  table {
+    width: 80%;
+    /* border-collapse: collapse; */
+    border-collapse: 1px solid black;
+    margin: auto;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    font-size: 1em;
+    text-align: left;
+
+    background-color: #f3f3f3be;
+    
+
+
+    /* background-color: red; */
+  }
+  
+  thead {
+    background-color: #333;
+    color: white;
+  }
+  
+  thead th {
+    padding: 12px 15px;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3bd;
+  }
+  
+  tbody tr:hover {
+    background-color: #717171cb;
+  }
+  
+  tbody td,
+  tbody th {
+    padding: 12px 15px;
+  }
+  
+  th[scope="row"] {
+    background-color: #f3f3f3;
+    font-weight: bold;
+  }
+  
+  table thead th {
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+  
+  h1 {
+    /* padding-top: 20px; */
+    padding: 10px;
+
+    margin: 10px auto;
+    margin-top: 20px;
+
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.771);
+    border-radius: 10px;
+  }
+
+
+  .maindiv {
+    text-align: center;
+    align-content: center;
+    background-image: url('../Assets/cookback.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+}
+  

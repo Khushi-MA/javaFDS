@@ -2,7 +2,9 @@ import React from 'react';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
+
+import './bookstyle.css'
 
 
 export default function Bookfoodreqs() {
@@ -59,55 +61,46 @@ export default function Bookfoodreqs() {
     };
 
 
-return (
-        <div classNameName="container">
-            <div classNameName="py-4">
-
-                <h1>Food Requests</h1>
-                <h1 className='text-centre m-4'> Welcome, {exportngousername}</h1>
-
-                <pre>{JSON.stringify(NgoInfo, null, 2)}</pre>
-
-                <form action="" onSubmit={handleButtonClick}>
-
-                <table className="table">
-                    <thead className="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Request ID</th>
-                            <th scope="col">FDS-ID</th>
-                            <th scope="col">NGO-ID</th>
-                            <th scope="col">Collect?</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            foodreq.map((foodreq, index) => (
-                                <tr key={foodreq.foodreqid}>
-                                    <th scope="row" key={index}>{index + 1}</th>
-                                    <td><input type="checkbox" onChange={(e) => handleCheckboxChange(e, foodreq.foodreqid)} /></td>
-                                    <td>{foodreq.foodreqid}</td>
-                                    <td>{foodreq.fdsuserid}</td>
-                                    <td>{foodreq.ngoid}</td>
-                                    {/* other columns */}
+    return (
+        <div className="container">
+            <div className="py-4">
+                <h1 className="text-center m-4">Welcome, {exportngousername}</h1>
+                {/* <pre>{JSON.stringify(NgoInfo, null, 2)}</pre> */}
+                <form onSubmit={handleButtonClick}>
+                    <h2>Food Requests</h2>
+                    <table className="table">
+                        <thead className="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Select</th>
+                                <th scope="col">Request ID</th>
+                                <th scope="col">FDS-ID</th>
+                                <th scope="col">Date of request</th>
+                                <th scope="col">Date of collection</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Days perishable</th>
+                                <th scope="col">Type of food</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {foodreq.map((req, index) => (
+                                <tr key={req.foodreqid}>
+                                    <th scope="row">{index + 1}</th>
+                                    <td><input type="checkbox" onChange={(e) => handleCheckboxChange(e, req.foodreqid)} /></td>
+                                    <td>{req.foodreqid}</td>
+                                    <td>{req.fdsuserid}</td>
+                                    <td>{new Date(req.date_of_req).toLocaleDateString('en-GB').replace(/\//g, '-')}</td>
+                                    <td>{new Date(req.date_of_collection).toLocaleDateString('en-GB').replace(/\//g, '-')}</td>
+                                    <td>{req.quantity}</td>
+                                    <td>{req.days_perishable}</td>
+                                    <td>{req.type_of_food}</td>
                                 </tr>
-                            ))
-                            // foodreq.map((foodreq, index) => (
-                            //     <tr>
-                            //         <th scope="row" key={index}>{index + 1}</th>
-                            //         <td>{foodreq.foodreqid}</td>
-                            //         <td>{foodreq.fdsuserid}</td>
-                            //         <td>{foodreq.ngoid}</td>
-                            //     </tr>
-                            // ))
-                        }
-
-                    </tbody>
-                </table>
-                <button type='submit' className='btn btn-outline-primary' onClick={handleButtonClick}>Update selected</button>
+                            ))}
+                        </tbody>
+                    </table>
+                    <button type="submit" className="btn btn-outline-primary">Update selected</button>
+                    <Link to="/" className="btn btn-outline-danger mx-2">Home</Link>
                 </form>
-
-
             </div>
         </div>
     );

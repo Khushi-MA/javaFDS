@@ -1,29 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Route } from "react-router-dom";
+import './Navbar.css'; // Importing the new CSS file
 
 export default function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a className="navbar-brand" href="/">
-                    Food Distribution System
-                </a>
+            <nav>
+                <div className="navbar-left">
+                    <a href="/">
+                        <strong>Food Distribution System</strong>
+                    </a>
+                    <Link to="/Oprfdsuser/Loginfdsuser">FDS</Link>
+                    <Link to="/Oprngo/Loginngo">NGO</Link>
+                    <Link to="/Pages/Teampage">Team</Link>
+                    <Link to="/Pages/Teampage">Stats</Link>
+                </div>
                 <button
-                    className="navbar-toggler"
                     type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <span></span>
                 </button>
-
-                <Link className="btn btn-outline-light" to="/Oprfdsuser/Addfdsuser" >FDS</Link>
-                <Link className="btn btn-outline-light" to="/Oprngo/Addngo">NGO</Link>
-                <Link  className="btn btn-outline-light" to="/Pages/Teampage">Team</Link>
             </nav>
         </div>
     );
