@@ -62,7 +62,7 @@ export default function Bookfoodreqs() {
 
 
     return (
-        <div className="container">
+        <div className="container maindiv">
             <div className="py-4">
                 <h1 className="text-center m-4">Welcome, {exportngousername}</h1>
                 {/* <pre>{JSON.stringify(NgoInfo, null, 2)}</pre> */}

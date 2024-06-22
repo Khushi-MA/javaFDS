@@ -36,9 +36,9 @@ export default function Addngo() {
   }
 
   return (
-    <div className='container'>
+    <div className='container maindiv'>
         <div className='row'>
-            <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
+            <div className='col-md offset-md-3 border rounded p-4 mt-2 shadow'>
                 <h2 className='text-center m-4'>Register NGO</h2>
                 <form onSubmit={onSubmit}>
                     <div className='form-group'>

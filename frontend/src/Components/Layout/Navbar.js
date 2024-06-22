@@ -13,7 +13,7 @@ export default function Navbar() {
                     <Link to="/Oprfdsuser/Loginfdsuser">FDS</Link>
                     <Link to="/Oprngo/Loginngo">NGO</Link>
                     <Link to="/Pages/Teampage">Team</Link>
-                    <Link to="/Pages/Teampage">Stats</Link>
+                    <Link to="/Pages/Stat">Stats</Link>
                 </div>
                 <button
                     type="button"

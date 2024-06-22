@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
+
 import 'D:/Ace/Practicals/JavaThings/java2/frontend/src/App.css';
 
 // import 'src/Components/Style.css';
@@ -26,9 +28,10 @@ import Editfoodreq from './Components/Oprfoodreq/Editfoodreq';
 import Viewfoodreq from './Components/Oprfoodreq/Viewfoodreq';
 import Bookfoodreqs from './Components/Oprfoodreq/Bookfoodreqs';
 
-import Stat from './Components/Layout/Stat';
+
 import Statnew from './Components/Pages/Statnew';
 import MyBarChart from './Components/Layout/MyBarChart';
+import Stat from './Components/Pages/Stat';
 
 
 
@@ -41,7 +44,6 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Pages/Teampage" element={<Teampage />} />
-          <Route exact path="/Layout/Stat" element={<Stat />} />
           <Route exact path="/Oprfdsuser/Addfdsuser" element={<Addfdsuser />} />
           <Route exact path="/Oprfdsuser/Editfdsuser" element={<Editfdsuser />} />
           <Route exact path="/Oprfdsuser/Viewfdsuser" element={<Viewfdsuser />} />
@@ -59,6 +61,7 @@ function App() {
           <Route exact path="/Oprfoodreq/Bookfoodreqs" element={<Bookfoodreqs />} />
           <Route exact path="/Pages/Statnew" element={<Statnew />} />
           <Route exact path="/Layout/MyBarChart" element={<MyBarChart />} />
+          <Route exact path="/Pages/Stat" element={<Stat />} />
 
         </Routes>
       </Router>
