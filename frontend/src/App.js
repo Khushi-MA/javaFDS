@@ -13,6 +13,8 @@ import 'D:/Ace/Practicals/JavaThings/java2/frontend/src/App.css';
 
 import Navbar from './Components/Layout/Navbar';
 import Home from './Components/Pages/Home';
+import Infopage from './Components/Pages/Infopage';
+
 import Teampage from './Components/Pages/Teampage';
 import Addfdsuser from './Components/Oprfdsuser/Addfdsuser';
 import Editfdsuser from './Components/Oprfdsuser/Editfdsuser';
@@ -47,6 +49,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Pages/Teampage" element={<Teampage />} />
+          <Route exact path="/Pages/Infopage" element={<Infopage />} />
+          
+
           <Route exact path="/Oprfdsuser/Addfdsuser" element={<Addfdsuser />} />
           <Route exact path="/Oprfdsuser/Editfdsuser" element={<Editfdsuser />} />
           <Route exact path="/Oprfdsuser/Viewfdsuser" element={<Viewfdsuser />} />
@@ -65,6 +70,7 @@ function App() {
           <Route exact path="/Pages/Statnew" element={<Statnew />} />
           <Route exact path="/Layout/MyBarChart" element={<MyBarChart />} />
           <Route exact path="/Pages/Stat" element={<Stat />} />
+        
           
           <Route exact path="/Style.css" element={<Stylesheet />} />
         </Routes>

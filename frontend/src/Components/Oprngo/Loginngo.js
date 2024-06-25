@@ -51,7 +51,7 @@ export default function Loginngo() {
         <div className='fullbody ngophoto'>
             <div className='login-container'>
                 <form onSubmit={onSubmit} className="login-form">
-                    <h2>Register NGO</h2>
+                    <h2>Login NGO</h2>
                     <div className='form-group'>
                         <label htmlFor="ngousername" className='form-label'>NGO Username</label>
                         <input type="text" className="form-control" name="ngousername" value={ngousername} onChange={(e) => onInputChange(e)} placeholder='enter your username' />

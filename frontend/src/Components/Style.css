@@ -20,6 +20,10 @@
     background-image: url('./Assets/statphoto.jpg');
 }
 
+.homephoto {
+    background-image: url('./Assets/homepage.png');
+}
+
 
 .fullbody {
     min-height: 100vh; /* Make sure it covers the full viewport height */
@@ -32,8 +36,40 @@
     width: 100vw;
 
     overflow: hidden;
-
 }
+
+.homepage {
+    background-color: rgba(236, 236, 236, 0.353);
+    padding: 20px;
+    width: 800px;
+}
+
+.homepage {
+    text-align: center;
+  }
+  
+  .homeheading {
+    color: #333; /* Dark grey */
+    font-size: 2.5rem; /* 40px */
+    margin-bottom: 20px;
+  }
+  
+  .homepara, .italicpara {
+    color: #000000; /* Lighter grey */
+    font-size: 1.4rem; /* 16px */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .italicpara {
+    font-style: italic;
+  }
+
+/* 
+.homepage .italicpara {
+    text-decoration: underline;
+} */
 
 .login-container {
     background-color: rgba(255, 255, 255, 0.659);
@@ -49,6 +85,11 @@
     
     padding: 0px;
 }
+
+.login-container p .italicpara {
+    background-color: red;
+}
+
 
 .login-container input {
     background-color: rgba(255, 255, 255, 0.836);

@@ -14,8 +14,7 @@ export default function Navbar() {
                     <Link to="/Oprngo/Loginngo">NGO</Link>
                     <Link to="/Pages/Teampage">Team</Link>
                     <Link to="/Pages/Stat">Stats</Link>
-
-
+                    <Link to="/Pages/Infopage">Infopage</Link>
 
                         <button style={{ marginLeft: 'auto' }} 
                             type="button"

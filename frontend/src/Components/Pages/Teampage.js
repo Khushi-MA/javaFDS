@@ -112,7 +112,7 @@ function Teampage() {
                 <a href="https://linkedin.com/in/khushi-appannavar">
                   <img src={link} />
                 </a>
-                <a href="https://www.linkedin.com/in/ananya-deshpande-9b7ab0261/">
+                <a href="https://sites.google.com/kletech.ac.in/khushi-fds-mp1?usp=sharing">
                   <img src={portfilio} />
                 </a>
               </div>
