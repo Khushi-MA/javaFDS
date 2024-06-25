@@ -1,19 +1,14 @@
 /* Table.css */
 
-body {
+div {
     /* font-family: Arial, sans-serif; */
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* font-family: 'Times New Roman', Times, serif; */
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
-
-
-  
     /* padding: 20px; */
-  }
-
-  h1 {
-    font-weight: 300;
   }
   
   table {
@@ -21,16 +16,11 @@ body {
     /* border-collapse: collapse; */
     border-collapse: 1px solid black;
     margin: auto;
-    /* margin-left: 20px;
-    margin-right: 20px; */
     font-size: 1em;
     text-align: left;
 
     background-color: #f3f3f3be;
-    
-
-
-    /* background-color: red; */
+    margin-bottom: 30px;
   }
   
   thead {
@@ -81,8 +71,9 @@ body {
     margin-top: 20px;
 
     width: fit-content;
-    background-color: rgba(255, 255, 255, 0.771);
+    background-color: rgba(255, 255, 255, 0.47);
     border-radius: 10px;
+    font-weight: bold;
   }
 
 
@@ -94,5 +85,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100vw;
+
+    /* margin: 50px; */
+    margin-top: 50px;
+    justify-content: center;
 }
   

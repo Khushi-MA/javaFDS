@@ -48,27 +48,24 @@ export default function Loginngo() {
     };
 
     return (
-        <div className='maindiv'>
-            <div className='row'>
-                <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
-                    <h2 className='text-centre m-4'>Register NGO</h2>
-
-                    <form action="" onSubmit={onSubmit}>
-                        <div className='md-3'>
-                            <label htmlFor="ngousername" className='form-label'>NGO Username</label>
-                            <input type="text" className='form-control' name="ngousername" value={ngousername} onChange={(e) => onInputChange(e)} placeholder='enter your username' />
-                        </div>
-                        <div className='md-3'>
-                            <label htmlFor="ngopassword" className='form-label'>NGO Password</label>
-                            <input type="text" className='form-control' name="ngopassword" value={ngopassword} onChange={(e) => onInputChange(e)} placeholder='enter your NGO Password' />
-                        </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
-                <Link className="btn btn-outline-secondary" to="/Oprngo/Addngo">New? Register</Link>
-
-
-                    </form>
-                </div>
+        <div className='fullbody ngophoto'>
+            <div className='login-container'>
+                <form onSubmit={onSubmit} className="login-form">
+                    <h2>Register NGO</h2>
+                    <div className='form-group'>
+                        <label htmlFor="ngousername" className='form-label'>NGO Username</label>
+                        <input type="text" className="form-control" name="ngousername" value={ngousername} onChange={(e) => onInputChange(e)} placeholder='enter your username' />
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor="ngopassword" className='form-label'>NGO Password</label>
+                        <input type="text" className="form-control" name="ngopassword" value={ngopassword} onChange={(e) => onInputChange(e)} placeholder='enter your NGO Password' />
+                    </div>
+                    <div className="form-group buttons">
+                        <button type="submit" className="btn submitbtn">Submit</button>
+                        <Link className="btn newuserbtn" to="/Oprngo/Addngo">New? Register</Link>
+                    </div>
+                </form>
             </div>
         </div>
-    )
+    );
 }

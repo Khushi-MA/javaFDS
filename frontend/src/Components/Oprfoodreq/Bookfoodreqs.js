@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-import './bookstyle.css'
+import '../Style.css'
 
 
 export default function Bookfoodreqs() {
@@ -62,14 +62,14 @@ export default function Bookfoodreqs() {
 
 
     return (
-        <div className="container maindiv">
-            <div className="py-4">
-                <h1 className="text-center m-4">Welcome, {exportngousername}</h1>
+        <div className="fullbody collectphoto">
+            <div className="login-container">
                 {/* <pre>{JSON.stringify(NgoInfo, null, 2)}</pre> */}
-                <form onSubmit={handleButtonClick}>
-                    <h2>Food Requests</h2>
-                    <table className="table">
-                        <thead className="thead-dark">
+                <form onSubmit={handleButtonClick} className='login-form'>
+                <h2>Welcome, {exportngousername}</h2>
+                <h4><strong>Food Collection Requests</strong></h4>
+                    <table style={{width:'100%', textAlign:'center'}}>
+                        <thead>
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Select</th>
@@ -86,7 +86,9 @@ export default function Bookfoodreqs() {
                             {foodreq.map((req, index) => (
                                 <tr key={req.foodreqid}>
                                     <th scope="row">{index + 1}</th>
-                                    <td><input type="checkbox" onChange={(e) => handleCheckboxChange(e, req.foodreqid)} /></td>
+                                    {/* <td><input type="checkbox" onChange={(e) => handleCheckboxChange(e, req.foodreqid)} /></td> */}
+                                    <td style={{textAlign:'center', alignItems:'center', alignContent:"center", padding:'0px 20px 30px 0px'}}><input type="checkbox" className="styled-checkbox" id={`checkbox-${req.foodreqid}`} onChange={(e) => handleCheckboxChange(e, req.foodreqid)} />
+                                    <label htmlFor={`checkbox-${req.foodreqid}`} className='booklabel'></label></td>
                                     <td>{req.foodreqid}</td>
                                     <td>{req.fdsuserid}</td>
                                     <td>{new Date(req.date_of_req).toLocaleDateString('en-GB').replace(/\//g, '-')}</td>
@@ -98,8 +100,11 @@ export default function Bookfoodreqs() {
                             ))}
                         </tbody>
                     </table>
-                    <button type="submit" className="btn btn-outline-primary">Update selected</button>
-                    <Link to="/" className="btn btn-outline-danger mx-2">Home</Link>
+
+                    <div className='form-group buttons'>
+                    <button type="submit" className='btn btn-primary'>Update selected</button>
+                    <Link to="/" className="btn newuserbtn">Home</Link>
+                    </div>
                 </form>
             </div>
         </div>

@@ -4,7 +4,7 @@ import './Navbar.css'; // Importing the new CSS file
 
 export default function Navbar() {
     return (
-        <div>
+        <div className="fullnav">
             <nav>
                 <div className="navbar-left">
                     <a href="/">
@@ -14,15 +14,20 @@ export default function Navbar() {
                     <Link to="/Oprngo/Loginngo">NGO</Link>
                     <Link to="/Pages/Teampage">Team</Link>
                     <Link to="/Pages/Stat">Stats</Link>
+
+
+
+                        <button style={{ marginLeft: 'auto' }} 
+                            type="button"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span></span>
+                        </button>
+                
                 </div>
-                <button
-                    type="button"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span></span>
-                </button>
+
             </nav>
         </div>
     );

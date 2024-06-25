@@ -3,6 +3,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import './Components/Style.css'
 
 
 
@@ -33,6 +34,8 @@ import Statnew from './Components/Pages/Statnew';
 import MyBarChart from './Components/Layout/MyBarChart';
 import Stat from './Components/Pages/Stat';
 
+import Stylesheet from './Components/Style.css';
+
 
 
 function App() {
@@ -62,7 +65,8 @@ function App() {
           <Route exact path="/Pages/Statnew" element={<Statnew />} />
           <Route exact path="/Layout/MyBarChart" element={<MyBarChart />} />
           <Route exact path="/Pages/Stat" element={<Stat />} />
-
+          
+          <Route exact path="/Style.css" element={<Stylesheet />} />
         </Routes>
       </Router>
   

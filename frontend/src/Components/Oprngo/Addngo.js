@@ -36,11 +36,11 @@ export default function Addngo() {
   }
 
   return (
-    <div className='container maindiv'>
-        <div className='row'>
-            <div className='col-md offset-md-3 border rounded p-4 mt-2 shadow'>
-                <h2 className='text-center m-4'>Register NGO</h2>
-                <form onSubmit={onSubmit}>
+    <div className='fullbody ngophoto'>
+        <div className='login-container'>
+        <form onSubmit={onSubmit} className="login-form">
+                <h2>Register NGO</h2>
+                
                     <div className='form-group'>
                         <label htmlFor="ngoname" className='form-label'>NGO Name</label>
                         <input type="text" className='form-control' name="ngoname" value={ngoname} onChange={onInputChange} placeholder='Enter your NGO name' />
@@ -53,10 +53,11 @@ export default function Addngo() {
                         <label htmlFor="ngopassword" className='form-label'>NGO Password</label>
                         <input type="password" className='form-control' name="ngopassword" value={ngopassword} onChange={onInputChange} placeholder='Enter your NGO password' />
                     </div>
-                    <button type='submit' className='btn btn-primary'>Submit</button>
-                    <Link to="/" className='btn btn-outline-danger mx-2'>Cancel</Link>
+                    <div className="form-group buttons">
+                    <button type='submit' className="btn submitbtn">Submit</button>
+                    <Link to="/" className="btn newuserbtn">Cancel</Link>
+                    </div>
                 </form>
-            </div>
         </div>
     </div>
 );

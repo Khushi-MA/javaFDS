@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 function Addfoodreq() {
     let navigate = useNavigate();
@@ -50,13 +50,13 @@ function Addfoodreq() {
     };
 
     return (
-        <div className='container maindiv'>
-            <div className='row'>
-                <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
-                    <h1 className='text-center m-4'>Welcome, {exportfdsusername}</h1>
+        <div className='fullbody collectphoto'>
+            <div className="login-container" >
                     {/* <pre>{JSON.stringify(foodreq, null, 2)}</pre> */}
                     
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={onSubmit} className="login-form" style={{width:'600px'}}>
+                    <h2>Welcome, {exportfdsusername}</h2>
+                    <h4><strong>Make your food collection request</strong></h4>
                         <div className='form-group'>
                             <label htmlFor='date_of_collection' className='form-label'>Date of Collection</label>
                             <input 
@@ -102,11 +102,15 @@ function Addfoodreq() {
                                 onChange={onInputChange} 
                             />
                         </div>
+
+                        <div className='form-group buttons'>
                         <button type='submit' className='btn btn-primary'>Register</button>
+                        <Link to="/" className="btn newuserbtn">Cancel</Link>
+                    </div>
+
                     </form>
                 </div>
             </div>
-        </div>
     );
 }
 

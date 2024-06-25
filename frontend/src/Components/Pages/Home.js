@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import './Home.css';
-import '../Style.css';
+
 
 import backgroundImage from '../Assets/cookback.jpg';
 

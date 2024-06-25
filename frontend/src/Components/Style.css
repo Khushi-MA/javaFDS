@@ -1,76 +1,116 @@
 /* Loginfdsuser.css */
 
+.fdsphoto {
+    background-image: url('./Assets/fdsphoto.jpg');
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.ngophoto {
+    background-image: url('./Assets/ngophoto.jpg');
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.collectphoto {
+    background-image: url('./Assets/collectphoto.jpg');
+}
+
+.statphoto {
+    background-image: url('./Assets/statphoto.jpg');
+}
+
+
+.fullbody {
+    min-height: 100vh; /* Make sure it covers the full viewport height */
+    width: 100%; /* Cover the full width */
+
+    /* text-align: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+
+    overflow: hidden;
+
+}
 
 .login-container {
+    background-color: rgba(255, 255, 255, 0.659);
+    margin: auto;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    margin: 20px;
-    height: 100vh;
+
+    min-width: 400px; 
+    max-width: fit-content;
+    border: 1px solid black;
+ 
+    
+    padding: 0px;
+}
+
+.login-container input {
+    background-color: rgba(255, 255, 255, 0.836);
+    border: 1px solid black;
+}
+
+.login-container h2 {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.login-container h4 {
+    color: black;
+    text-align: center;
+    margin: 30px;
 }
 
 .login-form {
-    background: white;
+    color: black;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 100%;
 
-    height: fit-content;
+    /* back */
 }
 
 .form-group {
-    margin-bottom: 15px;
-}
-
-.form-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.form-control {
+    margin-bottom: 20px;
+    background: transparent;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
 }
 
-.form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+.login-container .btn {
+    border: 1px solid black;
 }
 
-.btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.btn-primary {
+.login-container .submitbtn{
     background-color: #007bff;
     color: white;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.submitbtn:hover {
+    background-color: #4aa1ff;
 }
 
-.btn-outline-secondary {
+.login-container .newuserbtn {
     background-color: white;
-    border: 1px solid #6c757d;
-    color: #6c757d;
+    color: black;
 }
 
-.btn-outline-secondary:hover {
+.newuserbtn:hover {
     background-color: #6c757d;
     color: white;
+} 
+
+.login-container .buttons {
+    text-align: center;
+}
+
+.login-container .buttons .btn {
+    margin: 10px;
 }
 /* 
 .maindiv {
@@ -83,3 +123,188 @@
     width: 100vw;
 } */
   
+
+/* Hide the original checkbox */
+.styled-checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  
+  
+  /* Style for the custom checkbox appearance */
+  .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    /* padding-left: 25px; */
+    display: inline-block;
+
+    padding: auto;
+    /* padding: 10px 0px 5px 0px; */
+    /* padding: unset; */
+    text-align: center;
+  }
+  
+  /* Box for the custom checkbox */
+  .styled-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+  }
+  
+  /* Custom checkmark */
+  .styled-checkbox:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid #555;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); 
+  }
+
+svg {
+    background-color: transparent;
+}
+
+svg .recharts-surface {
+    color: black;
+}
+
+div .recharts-wrapper {
+    background-color: transparent;
+    color: black;
+}
+
+tspan {
+    color: black;
+    /* background-color: red; */
+}
+
+.recharts-default-legend {
+    background-color: transparent;
+}
+
+ul {
+    background-color: transparent;
+}
+
+
+/* ///// teampage  */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+
+.teamcards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    background-color: transparent;
+  }
+  
+  .card {
+    padding: 30px;
+    flex: 1 0 10%; /* flex-grow | flex-shrink | flex-basis */
+    box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2);
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.597);
+
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.397);
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+  }
+  
+   .card-body {
+    padding: 2px 16px;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .card-text {
+    margin-bottom: 15px;
+    background-color: transparent;
+  } 
+  
+  .link-images img {
+    width: 50%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    background-color: transparent;
+  }
+  
+  
+  header {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .colcard {
+
+    display: flex;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.500);
+    margin-top: 30px;
+
+
+  }
+  
+  .colcard-left {
+    background-color: transparent;
+    align-items: center;
+    margin: auto;
+    width: 20%;
+    text-align: center;
+  }
+  
+  .colcard-right {
+    padding: 10px;
+    width: 80%;
+
+    background-color: transparent;
+  }
+  
+   .colcard h1, .card h2, .card p {
+    margin: 0 0 10px 0;
+  }
+  
+  .colcard p:last-child {
+    margin-bottom: 0;
+  } 
+
+  .link-images {
+    background-color: transparent;
+    display: flex;
+    /* display: block; */
+  }
