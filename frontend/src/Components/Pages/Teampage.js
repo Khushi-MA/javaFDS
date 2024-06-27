@@ -59,7 +59,7 @@ function Teampage() {
             <div class="card-body">
               <p class="card-text">
                 <strong>Sanket Kothari</strong>
-                <br />01FE21BCS000 (100)
+                <br />01FE21BCS358 (159)
               </p>
               <div className="link-images">
                 <a href="https://github.com/SK-3000">
@@ -81,7 +81,7 @@ function Teampage() {
             <div class="card-body">
               <p class="card-text">
                 <strong>Praveen Puttannavar</strong>
-                <br />01FE21BCS000 (200)
+                <br />01FE21BCS148 (223)
               </p>
               <div className="link-images">
                 <a href="link:https://github.com/praveen0148">
@@ -125,7 +125,7 @@ function Teampage() {
             <div class="card-body">
               <p class="card-text">
                 <strong>Shweta V Pagadi</strong>
-                <br />01FE21BC!000 (600)
+                <br />01FE21BCI009 (108)
               </p>
               <div className="link-images">
                 <a href="https://github.com/01fe21bci009shweta">
