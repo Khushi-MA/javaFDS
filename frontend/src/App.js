@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
-import 'D:/Ace/Practicals/JavaThings/java2/frontend/src/App.css';
+import 'D:/Ace/Practicals/JavaThings/javaFDS/frontend/src/App.css';
 
 // import 'src/Components/Style.css';
 
