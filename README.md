@@ -6,6 +6,10 @@ Our Food Management System is a dedicated initiative aimed at efficiently distri
 
 **Join us in making a difference and ensuring that no one goes to bed hungry.**
 
+<img src="https://github.com/Khushi-MA/javaFDS/blob/main/assets2/at_a_glance.gif" alt="Sign Spotting GIF" style="width:50%;">
+
+
+
 ## SDG Connection
 **SDG 12.3:**  
 By 2030, halve per capita global food waste at the retail and consumer levels, and reduce food losses along production and supply chains, including post-harvest losses.
